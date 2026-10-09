@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('cogniquiz_theme') || localStorage.getItem('theme');
+          var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (saved === 'light' || (!saved && prefersLight)) {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+            document.documentElement.style.colorScheme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+            document.documentElement.style.colorScheme = 'dark';
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2314b8a6'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5h-2v-2h2zm0-4h-2V7h2z'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CogniQuiz AI - Production Full-Stack AI Quiz Generator, Battle Platform, and Analytics for Computer Science" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>CogniQuiz AI - Production CS Quiz Platform & Leaderboard</title>
+    <script type="module" crossorigin src="/assets/index-SGrxcfjh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D2KXPZtL.css">
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#0a0d14] dark:text-slate-100 antialiased selection:bg-teal-500 selection:text-white min-h-screen transition-colors duration-200">
+    <div id="root"></div>
+  </body>
+</html>
